@@ -13,8 +13,8 @@ class Automaton {
       },
     });
   }
-
-  async parseJobsToQueue() {}
 }
+
+export interface IAutomatonConstructor {}
 
 export default Automaton;
