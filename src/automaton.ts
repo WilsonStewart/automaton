@@ -15,6 +15,4 @@ class Automaton {
   }
 }
 
-export interface IAutomatonConstructor {}
-
 export default Automaton;

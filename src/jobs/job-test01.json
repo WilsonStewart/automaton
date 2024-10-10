@@ -1,0 +1,33 @@
+[
+  {
+    "name": "test_01",
+    "displayName": "Test job number UNO",
+    "repeat": "* * * * *",
+    "tasks": [
+      {
+        "description": "step 1 ",
+        "group": 0,
+        "module": "dev:test-message",
+        "data": {
+          "message": "Hi, i'm bob"
+        }
+      },
+      {
+        "description": "step 2",
+        "group": 10,
+        "module": "dev:test-message",
+        "data": {
+          "message": "Hi, i'm bob"
+        }
+      },
+      {
+        "description": "step 3",
+        "group": 0,
+        "module": "dev:test-message",
+        "data": {
+          "message": "Hi, i'm bob"
+        }
+      }
+    ]
+  }
+]
