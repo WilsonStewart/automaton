@@ -1,0 +1,19 @@
+[
+  {
+    "name": "test_01_conmusvids",
+    "displayName": "Download all Connections Museum Vidoes",
+    "mainQueue": "main",
+    "repeat": "* * * * *",
+    "tasks": [
+      {
+        "description": "checkout archive json",
+        "group": 0,
+        "queue": "main",
+        "data": {
+          "action": "dev:placeholder",
+          "delay": 5000
+        }
+      }
+    ]
+  }
+]

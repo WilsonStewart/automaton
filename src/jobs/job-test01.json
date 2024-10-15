@@ -1,31 +1,39 @@
 [
   {
-    "name": "test_01",
-    "displayName": "Test job number UNO",
+    "name": "test_01_conmusvids",
+    "displayName": "Download all Connections Museum Vidoes",
     "repeat": "* * * * *",
     "tasks": [
       {
-        "description": "step 1 ",
+        "description": "checkout archive json",
         "group": 0,
-        "module": "dev:test-message",
         "data": {
-          "message": "Hi, i'm bob"
+          "module": "dev:placeholder",
+          "delay": 5000
         }
       },
       {
-        "description": "step 2",
+        "description": "get all youtube videos in the channel",
+        "group": 0,
+        "data": {
+          "module": "dev:placeholder",
+          "delay": 5000
+        }
+      },
+      {
+        "description": "determine which videos need downloaded and create download queue jobs",
         "group": 10,
-        "module": "dev:test-message",
         "data": {
-          "message": "Hi, i'm bob"
+          "module": "dev:placeholder",
+          "delay": 5000
         }
       },
       {
-        "description": "step 3",
-        "group": 0,
-        "module": "dev:test-message",
+        "description": "update archive json and check back in",
+        "group": 20,
         "data": {
-          "message": "Hi, i'm bob"
+          "module": "dev:placeholder",
+          "delay": 5000
         }
       }
     ]

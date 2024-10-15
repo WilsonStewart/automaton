@@ -1,13 +1,18 @@
+export interface IAutomatonConstructor {}
+
 export interface IMasterAutomatonConstructor extends IAutomatonConstructor {
   jobsFile: string;
 }
 
-export interface IAutomatonConstructor {}
+export interface IWorkerAutomatonConstructor extends IAutomatonConstructor {
+  queue: string;
+}
 
 export interface IJob {
   name: string;
   displayName: string;
-  repeat: string | false;
+  repeat: string | undefined;
+  mainQueue: "main" | "dummy";
   tasks: ITask[];
 }
 
@@ -15,5 +20,15 @@ export interface ITask {
   description: string;
   group: number;
   module: string;
-  params: any;
+  data: TBullJobData;
+}
+
+export type TBullJobData = IDevBullJobData;
+
+interface IBaseBullJobDat {
+  queue: string;
+}
+
+interface IDevBullJobData extends IBaseBullJobDat {
+  delay: number;
 }
